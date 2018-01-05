@@ -2,5 +2,12 @@ new Vue({
   el:'#widget',
   data:{
     name:'Mithoon Kumar'
+  },
+  methods:{
+    greet:function(text){
+      console.log("consoling",this);// look at the object structure of this
+      return "Hey" + " " +text +" "+this._data.name + " "+ this.name ; 
+
+    }
   }
 });
