@@ -9,7 +9,10 @@
   <body>
     <h1>Hello VueJs</h1>
     <div id="widget">
-      <h2>{{greet("Good Morning")}}</h2>
+      <a v-bind:href="website">link</a>
+      <input v-bind:value="name"></input><!--data binding -->
+      <input :value="name"></input><!-- shortcut way -->
+      <p v-html="tag"><p> <!--This helps in injecting html codes  -->
     </div>
     <script src="app.js"></script>
   </body>
