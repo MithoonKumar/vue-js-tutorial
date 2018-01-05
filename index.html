@@ -2,11 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="vue.js"></script>
     <link href="style.css"></link>
     <title>First Vue.js Project</title>
   </head>
   <body>
     <h1>Hello VueJs</h1>
+    <div id="widget">
+      <a v-bind:href="website">link</a>
+      <input v-bind:value="name"></input><!--data binding -->
+      <input :value="name"></input><!-- shortcut way -->
+      <p v-html="tag"><p> <!--This helps in injecting html codes  -->
+    </div>
+    <script src="app.js"></script>
   </body>
 </html>
