@@ -12,6 +12,9 @@ new Vue({
     },
     changeUrl:function(){
       this.website = "https://atom.io/packages/terminal-plus";
+    },
+    click:function(){
+      alert("link clicked by user");
     }
   }
 });
