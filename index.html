@@ -9,12 +9,9 @@
   <body>
     <h1>Hello VueJs</h1>
     <div id="widget">
-      <button v-on:click="a++">increase a</button>
-      <button v-on:click="b++">increase b</button>
-      <p>{{methodA()}}</p>
-      <p>{{methodB()}}</p>
-      <p>{{computedA}}</p>
-      <p>{{computedB}}</p>
+      <input type="text" v-on:keyup.enter="logName" v-model="name"/>
+      <p>{{name}}</p>
+      <!-- logName function will be called after the "enter" button is clicked and the key is lifted -->
     </div>
     <script src="app.js"></script>
   </body>
