@@ -9,7 +9,8 @@
   <body>
     <h1>Hello VueJs</h1>
     <div id="widget">
-      <input type="text" v-on:keyup.enter="logName" />
+      <input type="text" v-on:keyup.enter="logName" v-model="name"/>
+      <p>{{name}}</p>
       <!-- logName function will be called after the "enter" button is clicked and the key is lifted -->
     </div>
     <script src="app.js"></script>

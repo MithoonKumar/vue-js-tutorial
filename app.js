@@ -1,7 +1,7 @@
 new Vue({
   el:'#widget',
   data:{
-
+      name:""
   },
   methods:{
      logName(){
