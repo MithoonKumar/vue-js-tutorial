@@ -1,17 +1,9 @@
 new Vue({
   el:'#widget',
   data:{
-    green: false,
-    bigFontSize: false
+    success: true
   },
   methods:{
-    methodClass: function() {
-      console.log("consoling the context", this.green, this.bigFontSize);
-      return {
-        color: this.green,
-        fontsize: this.bigFontSize
-      };
-    }
   },
   computed:{
   }
