@@ -7,20 +7,12 @@
     <title>First Vue.js Project</title>
   </head>
   <body>
-    <div id="widget">
-      <!-- bag Image -->
-      <div class="bag">
-        <img  class="bag" src="bag.jpg" v-show="!ended"></img>
-      </div>
-      <!-- bag health bar -->
-      <div class="bar">
-        <div class="color" v-bind:style="{width: health + '%'}"></div>
-      </div>
-      <!-- game control buttons -->
-      <div class="controller">
-        <button v-on:click="punch()" class="half">Punch</button>
-        <button v-on:click="restart()"class="half">Restart</button>
-      </div>
+    <div id="first-instance">
+      <h1>{{title}}</h1>
+    </div>
+    <div id="second-instance">
+      <h1>{{title}}</h1>
+      <button v-on:click="changeTitle()">Change Title</button>
     </div>
     <script src="app.js"></script>
   </body>

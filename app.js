@@ -1,21 +1,18 @@
-new Vue({
-  el:'#widget',
+var first = new Vue({
+  el:'#first-instance',
   data:{
-    ended: false,
-    health: 100
+    title: "first instance title unchanged"
+  }
+});
+
+var second = new Vue({
+  el: '#second-instance',
+  data: {
+    title: "second instance title unchanged"
   },
-  methods:{
-    punch(){
-      this.health-=10;
-      if(this.health<=0) {
-        this.ended = true;
-      }
-    },
-    restart(){
-      this.health=100;
-      this.ended=false;
+  methods: {
+    changeTitle: function(){
+      first.title = "title changed by the second instance";
     }
-  },
-  computed:{
   }
 });
