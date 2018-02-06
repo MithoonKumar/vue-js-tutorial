@@ -9,9 +9,9 @@
   <body>
     <h1>Hello VueJs</h1>
     <div id="widget">
-      <button v-on:click="success = !success">toggle state</button>
-      <p v-show="success">success</p>
-      <p v-show="!success">error</p>
+      <ul>
+        <li v-for="(name,index) in nameData">{{index + 1}}.    {{name}}</li>
+      </ul>
     </div>
     <script src="app.js"></script>
   </body>

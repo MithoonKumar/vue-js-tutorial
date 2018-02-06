@@ -1,7 +1,8 @@
 new Vue({
   el:'#widget',
   data:{
-    success: true
+    success: true,
+    nameData: ["Mithoon", "Sachin", "Rajesh"]
   },
   methods:{
   },
