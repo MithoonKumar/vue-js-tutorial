@@ -1,11 +1,35 @@
-.fontsize {
-  font-size: 100px;
+.bag {
+  height: 200px;
+  width: 150px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.bar {
+  height: 30px;
+  width: 150px;
+  border: 1px solid rgb(0, 0, 0);
 }
 
 .color {
-  color: green;
+  background-color: green;
+  height: 100%;
 }
 
-.color1 {
-  color: blue;
+.controller {
+  background-color: inherit;
+  height: 30px;
+  width: 150px;
+}
+
+.half {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  width: 50%;
+  height: 100%;
+  display: inline-block;
+  float: left;
+  border: 1px solid rgb(0, 0, 0);
+  box-sizing: border-box;
+  outline: none;
 }
