@@ -1,27 +1,18 @@
 new Vue({
   el:'#widget',
   data:{
-      a:0,
-      b:0
+    green: false,
+    bigFontSize: false
   },
   methods:{
-     methodA:function(){
-       console.log("executed methodA");
-       return this.a;
-     },
-     methodB:function(){
-       console.log("executed methodB");
-       return this.b;
-     }
+    methodClass: function() {
+      console.log("consoling the context", this.green, this.bigFontSize);
+      return {
+        color: this.green,
+        fontsize: this.bigFontSize
+      };
+    }
   },
   computed:{
-    computedA:function(){
-      console.log("executed computedA");
-      return this.a;
-    },
-    computedB:function(){
-      console.log("executed computedB");
-      return this.b;
-    }
   }
 });

@@ -3,18 +3,16 @@
   <head>
     <meta charset="utf-8">
     <script src="vue.js"></script>
-    <link href="style.css"></link>
+    <link href="style.css" rel="stylesheet"></link>
     <title>First Vue.js Project</title>
   </head>
   <body>
     <h1>Hello VueJs</h1>
     <div id="widget">
-      <button v-on:click="a++">increase a</button>
-      <button v-on:click="b++">increase b</button>
-      <p>{{methodA()}}</p>
-      <p>{{methodB()}}</p>
-      <p>{{computedA}}</p>
-      <p>{{computedB}}</p>
+      <button v-on:click="green = !green">toggle color</button>
+      <button v-on:click="bigFontSize = !bigFontSize">toggle size</button>
+      <p v-bind:class="methodClass()">This text has dynamic css</p>
+      <p v-bind:class="{color1: green,fontsize: bigFontSize}">Aother way of adding dynamic class to p tag</p>
     </div>
     <script src="app.js"></script>
   </body>
