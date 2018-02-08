@@ -1,3 +1,8 @@
+Vue.component('reusable', {
+  template:'<p>Hello People ! This is a reusable template</p>'
+});
+
+
 var first = new Vue({
   el:'#first-instance',
   data:{
