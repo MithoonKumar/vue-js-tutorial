@@ -3,6 +3,7 @@
     <ul>
       <li v-for="(ninja,index) in ninjas">{{index+1}}. {{ninja}}</li>
     </ul>
+    <button v-on:click="changeObject()">Pop the last element</button>
   </div>
 </template>
 
@@ -12,6 +13,11 @@
     name: "body",
     data () {
       return {
+      }
+    },
+    methods: {
+      changeObject: function () {
+        this.ninjas.pop();
       }
     }
   }

@@ -1,8 +1,13 @@
 <template>
   <div>
-    <app-header></app-header>
-    <app-content v-bind:ninjas="ninjas"></app-content>
+    <app-header v-bind:title="title"></app-header>
+    <app-content v-bind:ninjas="ninjas" v-bind:title="title"></app-content>
     <app-footer></app-footer>
+    <p>Below is renderd from app.vue</p>
+    <ul>
+      <li v-for="(ninja, index) in ninjas">{{index}}. {{ninja}}</li>
+    </ul>
+    <p>{{title}}</p>
   </div>
 </template>
 
@@ -19,7 +24,7 @@ export default {
   name: 'app',
   data () {
     return {
-      title:"title should be bold",
+      title:"title passed from app.vue",
       ninjas: ["tom", "dick", "hary"]
     }
   }
