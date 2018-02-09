@@ -1,15 +1,17 @@
 <template>
   <div class="container">
-    <p>{{content}}</p>
+    <ul>
+      <li v-for="(ninja,index) in ninjas">{{index+1}}. {{ninja}}</li>
+    </ul>
   </div>
 </template>
 
 <script>
   export default {
+    props:['ninjas'],
     name: "body",
     data () {
       return {
-        content: "This is the content in the body"
       }
     }
   }

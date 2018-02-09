@@ -1,7 +1,7 @@
 <template>
   <div>
     <app-header></app-header>
-    <app-content></app-content>
+    <app-content v-bind:ninjas="ninjas"></app-content>
     <app-footer></app-footer>
   </div>
 </template>
@@ -19,7 +19,8 @@ export default {
   name: 'app',
   data () {
     return {
-      title:"title should be bold"
+      title:"title should be bold",
+      ninjas: ["tom", "dick", "hary"]
     }
   }
 }
