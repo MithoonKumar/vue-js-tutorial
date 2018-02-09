@@ -1,16 +1,20 @@
 <template>
   <div>
-    <h1>{{title}}</h1>
-    <img src="./assets/logo.png"></img>
-    <new1></new1>
+    <app-header></app-header>
+    <app-content></app-content>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
-import new1 from "./new1.vue"
+import header from "./header.vue";
+import content from "./body.vue";
+import footer from "./footer.vue"
 export default {
   components:{
-    new1: new1
+    'app-header': header,
+    'app-content': content,
+    'app-footer': footer
   },
   name: 'app',
   data () {
