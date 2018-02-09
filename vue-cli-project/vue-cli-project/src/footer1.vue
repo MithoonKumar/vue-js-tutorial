@@ -4,7 +4,7 @@
 
 <script>
   export default {
-    name: "footer",
+    name: "footer1",
     data () {
       return {
         text:"Copyright @ 1992"

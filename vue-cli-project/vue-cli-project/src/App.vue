@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import header from "./header.vue";
-import content from "./body.vue";
-import footer from "./footer.vue"
+import header from "./header1.vue";
+import content from "./body1.vue";
+import footer from "./footer1.vue"
 export default {
   components:{
     'app-header': header,

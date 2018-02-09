@@ -10,10 +10,11 @@
   export default {
     props: {
       ninjas: {
-        type: Array
+        type: Array,
+        required: true // If this prop is not passed then its type check can be stooped by setting required to false
       }
     },
-    name: "body",
+    name: "body1",
     data () {
       return {
       }
