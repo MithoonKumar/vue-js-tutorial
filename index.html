@@ -7,14 +7,16 @@
     <title>First Vue.js Project</title>
   </head>
   <body>
+    <input id="input-box" ref="new-input"></input>
     <div id="first-instance">
       <h1>{{title}}</h1>
-      <reusable></reusable>
-    </div>
-    <div id="second-instance">
-      <h1>{{title}}</h1>
-      <reusable></reusable>
-      <button v-on:click="changeTitle()">Change Title</button>
+      <ul>
+        <li ref="first">first</li>
+        <li ref="second">second</li>
+        <li ref="third">third</li>
+        <li ref="fourth">fourth</li>
+      </ul>
+      <button v-on:click="readRefs" >Logger Button</button>
     </div>
     <script src="app.js"></script>
   </body>
