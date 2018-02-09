@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style>
-new1 {
-
+h1 {
+  color: blue;
 }
 </style>
