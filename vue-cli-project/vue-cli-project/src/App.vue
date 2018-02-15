@@ -1,8 +1,8 @@
 <template>
   <div>
-    <app-header></app-header>
+    <app-header v-bind:title="title" v-on:change="catchEvent"></app-header>
     <app-content v-bind:ninjas="ninjas"></app-content>
-    <app-footer></app-footer>
+    <app-footer v-bind:title="title"></app-footer>
   </div>
 </template>
 
@@ -19,8 +19,14 @@ export default {
   name: 'app',
   data () {
     return {
-      title:"title should be bold",
+      title:"Title given from App.vue",
       ninjas: ["tom", "dick", "hary"]
+    }
+  },
+  methods: {
+    catchEvent: function (newTitle) {
+      console.log("consoling the arg passed", newTitle);
+      this.title = newTitle;
     }
   }
 }

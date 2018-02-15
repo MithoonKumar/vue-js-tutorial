@@ -1,16 +1,28 @@
 <template>
-  <header>{{title}}</header>
+  <div>
+    <header>{{title}}</header>
+    <button v-on:click="changeTitle">change title</button>
+    <button v-on:click="test">Test Button</button>
+  </div>
 </template>
 
 <script>
 export default {
   name: "header1",
-  data () {
-    return {
-      title:"This header is from header.vue"
+  props: {
+    title: {
+      type: String,
+      required: true
+    }
+  },
+  methods:{
+    changeTitle: function () {
+      this.$emit('change',"sent the title through emitter");
+    },
+    test: function () {
+      console.log("consoling test function");
     }
   }
-
 }
 </script>
 

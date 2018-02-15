@@ -1,13 +1,14 @@
 <template>
-  <footer>{{text}}</footer>
+  <footer>{{title}}</footer>
 </template>
 
 <script>
   export default {
     name: "footer1",
-    data () {
-      return {
-        text:"Copyright @ 1992"
+    props: {
+      title: {
+        type: String,
+        required: true
       }
     }
   }
