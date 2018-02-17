@@ -2,11 +2,11 @@
   <div>
     <header>{{title}}</header>
     <button v-on:click="changeTitle">change title</button>
-    <button v-on:click="test">Test Button</button>
   </div>
 </template>
 
 <script>
+import {bus} from './main'
 export default {
   name: "header1",
   props: {
@@ -17,7 +17,8 @@ export default {
   },
   methods:{
     changeTitle: function () {
-      this.$emit('change',"sent the title through emitter");
+      //this.title = "Changed title using event bus";
+      bus.$emit('change', "Changed title using event bus");
     },
     test: function () {
       console.log("consoling test function");

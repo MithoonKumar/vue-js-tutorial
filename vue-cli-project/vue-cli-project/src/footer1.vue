@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import {bus} from './main'
   export default {
     name: "footer1",
     props: {
@@ -10,7 +11,12 @@
         type: String,
         required: true
       }
-    }
+    },
+    created() {
+      bus.$on('change', data => {
+        this.title = data;
+      });
+    },
   }
 </script>
 

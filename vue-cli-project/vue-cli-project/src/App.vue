@@ -1,7 +1,7 @@
 <template>
   <div>
-    <app-header v-bind:title="title" v-on:change="catchEvent"></app-header>
-    <app-content v-bind:ninjas="ninjas"></app-content>
+    <app-header v-bind:title="title"></app-header>
+    <app-content v-bind:arr="arr"></app-content>
     <app-footer v-bind:title="title"></app-footer>
   </div>
 </template>
@@ -19,15 +19,12 @@ export default {
   name: 'app',
   data () {
     return {
-      title:"Title given from App.vue",
-      ninjas: ["tom", "dick", "hary"]
+      title:'Title given from App.vue',
+      arr: ["tom", "den", "hary"]
     }
   },
-  methods: {
-    catchEvent: function (newTitle) {
-      console.log("consoling the arg passed", newTitle);
-      this.title = newTitle;
-    }
+  created () {
+    console.log("created again");
   }
 }
 </script>

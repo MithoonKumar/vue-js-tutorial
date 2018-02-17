@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <ul>
-      <li v-for="(ninja,index) in ninjas">{{index+1}}. {{ninja}}</li>
+      <li v-for="(item, index) in arr">{{index+1}}. {{item}}</li>
     </ul>
   </div>
 </template>
@@ -9,7 +9,7 @@
 <script>
   export default {
     props: {
-      ninjas: {
+      arr: {
         type: Array,
         required: true // If this prop is not passed then its type check can be stooped by setting required to false
       }
