@@ -1,23 +1,29 @@
 <template>
   <div>
-    <new1>
-      <p slot="upper-slot">{{upperTitle}}</p>
-      <p slot="lower-slot">{{lowerTitle}}</p>
-    </new1>
+    <keep-alive>
+      <component v-bind:is="component"></component> <!--when switching between components the components are destroyed and created... we can track that by removing keep-alive -->
+    </keep-alive>
+    <button v-on:click="toggle">toggle</button>
   </div>
 </template>
 
 <script>
-import new1 from "./new.vue"
+import first from "./first.vue";
+import second from "./second.vue"
 export default {
   components:{
-    "new1": new1
+    "first": first,
+    "second": second
   },
   name: 'app',
   data () {
     return {
-      upperTitle: "title in the upper slot",
-      lowerTitle: "title in the lower slot"
+      component:"first"
+    }
+  },
+  methods: {
+    toggle () {
+      this.component = this.component === "first" ? "second" : "first";
     }
   }
 }
