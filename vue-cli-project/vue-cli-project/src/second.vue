@@ -1,27 +1,22 @@
 <template>
   <div>
-    <h1>{{title}}</h1>
-    <input>input</input>
+    <input v-model="name"> </input>
+    <p>{{name}}</p>
   </div>
 </template>
 <script>
 export default {
   name: "second",
-  data () {
+  data: function() {
     return {
-      title:"second"
-    }
-  },
-  beforeDestroy () {
-    alert("Its going to be destroyed-->2");
-  },
-  destroyed () {
-    alert("Its destroyed-->2");
+      name:""
+    };
   }
 }
 </script>
 <style scoped>
-h1 {
-  color: green;
+input {
+  outline: none;
+
 }
 </style>
