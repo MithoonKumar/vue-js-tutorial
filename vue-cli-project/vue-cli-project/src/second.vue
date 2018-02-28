@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input v-model="name"> </input>
+    <input v-model.lazy="name"> </input>
     <p>{{name}}</p>
   </div>
 </template>
